@@ -7,6 +7,13 @@ Analysis code for the asthma lactylation / RCC2 project.
 - `methods/`: analysis scripts organized in a Methods-section order
 - `scripts/`: helper CLIs (e.g., table generation)
 
+Selected entrypoints:
+- Cell communication (CellChat): `methods/11_cellchat/cellchat_retinoic_acid_high_low_analysis.R`
+- Trajectory (Monocle2): `methods/12_trajectory/trajectory_aec_monocle2_analysis.R`
+- Lactylation pathway scoring: `methods/03_lactylation/01_pathway_scoring/lactylation_pathway_scoring.R`
+- MBDs scoring (LMBDs): `methods/09_mbds_scoring/LMBDs_scoring.R`
+- RCC2 functional analysis: `methods/13_rcc2_function/rcc2_expression_group_comparison.R`
+
 ## Environment
 
 - R: 4.3.1
@@ -50,4 +57,4 @@ Outputs:
 - Many R scripts intentionally keep the original hard-coded `setwd("D:\\...")` patterns.
   Run scripts from the intended working directory or adjust paths locally.
 - `methods/03_lactylation/01_pathway_scoring/lactylation_pathway_scoring.R` calls `source("./1.R")`.
-  The helper file `1.R` is not included in this repository and must be provided locally to run the script as-is.
+  `methods/03_lactylation/01_pathway_scoring/1.R` is included and is a small wrapper that sources `dotplot.R`.
